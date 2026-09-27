@@ -14,7 +14,7 @@ learned that lesson the hard way.
 
 I kept missing rocket launches. Not the big famous ones — those are everywhere —
 but the weird little ones, and the solar storms that make the radio go funny,
-and the alignment windows where 2planets have a cool oppposition in conjunction. The
+and the alignment windows where 2 planets have a cool oppposition in conjunction. The
 launch sites are a chore to dig through, and the space-weather feeds are
 written for people with degrees I don't have. So I built the thing I wanted:
 one place that just tells me what's coming up, in plain language, that I can
