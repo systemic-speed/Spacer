@@ -1,24 +1,15 @@
 # Spacer
 
-Spacer is a little tool that grabs upcoming space stuff — solar weather, rocket
+Spacer is a cool little tool that grabs upcoming space stuff — solar weather, rocket
 launches, and planetary / astronomy events — and shows it to you wherever you
 happen to be looking: the terminal, Slack, Discord, a desktop window, or a web
 page.
 
-The whole thing is built around one function, `SpaceEngine.get_events(...)`.
-Every front-end (CLI, bots, GUI, web) just calls that, so all the fetching and
-filtering lives in exactly one place. No copy-paste across five files — I
-learned that lesson the hard way.
-
 ## The Reason I Made This
 
-I kept missing rocket launches. Not the big famous ones — those are everywhere —
-but the weird little ones, and the solar storms that make the radio go funny,
-and the alignment windows where 2 planets have a cool oppposition in conjunction. The
-launch sites are a chore to dig through, and the space-weather feeds are
-written for people with degrees I don't have. So I built the thing I wanted:
-one place that just tells me what's coming up, in plain language, that I can
-also boss around from Slack when I'm supposed to be doing something else.
+I like space stuff, like give me anything about space and i will eat it up like a very, very happy golden retriever, but there is a small problem.
+
+suppose I want to use my freetime to go and see a nearby rocket launch, problem is, very big launches will have huge crowds, and findings small launches is a chore that might make you miss that actual launch, so this is why I made a tool for people like me to see cool space events and just general space stuff. This tool is the Spacer bots on both discord and slack and the Spacer CLI 
 
 (There's also a Groq-powered `!groq` command now, because sometimes you just
 want to ask "what the heck is a coronal mass ejection" without opening a new
@@ -29,6 +20,7 @@ tab. More on that below.)
 Needs Python 3.11+ and pip.
 
 ```bash
+git clone https://github.com/Gautham-rgb/Spacer/edit/main/README.md
 pip install -e .
 ```
 
@@ -176,24 +168,14 @@ Run just one: `cd deploy && docker compose up --build web`.
 - `src/web/app.py` — the web page (`spacer-web`); the `app.py` at the repo
   root boots it for hosting.
 
-## Tips
-
-- **Use `spacer-serve` on a server.** It's the least fiddly way to get web + bots up.
-- **The `!groq` command is separate from `!space`.** It doesn't need a track or
-  a subcommand — just ask it stuff.
-- **`--check-update`** tells you if a newer build exists (it checks PyPI, but
-  honestly just `git pull` is faster).
-- **Stuck?** `spacer --help` and the bots' `!space help` cover most of it.
-- **Use it via code:** `from engine import SpaceEngine` and call
-  `SpaceEngine().get_events(...)` directly. It's just a function.
 
 ## Credits
 
-Made by Gautham, and way too much coffee.
+Made by systemic_speed, and way too much coffee.
 
 The space data comes from [The Space Devs](https://thespacedevs.com/) and NOAA;
 the astronomy is computed locally from JPL's `de421.bsp` via Skyfield. Groq
-powers the chat. None of this would exist without those.
+powers the chat.
 
 ## License
 
