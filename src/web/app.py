@@ -165,7 +165,7 @@ def _footer() -> None:
                 new_tab=True).classes("text-sm text-accent chip bg-white/5 px-4 py-1.5")
         ui.link("Slack", "https://app.slack.com/client/T0B9WS0J88P/C0BAFUQQCQ4",
                 new_tab=True).classes("text-sm text-accent chip bg-white/5 px-4 py-1.5")
-        ui.link("GitHub", "https://github.com/Gautham-rgb/Spacer",
+        ui.link("GitHub", "https://github.com/systemic-speed/Spacer",
                 new_tab=True).classes("text-sm text-accent chip bg-white/5 px-4 py-1.5")
     with ui.row().classes("w-full justify-center mb-4 items-center gap-2"):
         ui.label(f"{SITE_NAME} v{__version__}").classes("text-xs text-gray-600")
